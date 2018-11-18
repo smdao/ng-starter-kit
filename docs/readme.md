@@ -1,4 +1,4 @@
-# rqa-vnext
+# ng-rocket-ui
 
 Welcome to the project documentation!
 
