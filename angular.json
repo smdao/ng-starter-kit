@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rocket-ui": {
+    "ng-rocket-ui": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rocket-ui:build"
+            "browserTarget": "ng-rocket-ui:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "rocket-ui:build:production"
+              "browserTarget": "ng-rocket-ui:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rocket-ui:build"
+            "browserTarget": "ng-rocket-ui:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "rocket-ui-e2e": {
+    "ng-rocket-ui-e2e": {
       "root": "e2e",
       "projectType": "application",
       "architect": {
@@ -115,7 +115,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "rocket-ui:serve"
+            "devServerTarget": "ng-rocket-ui:serve"
           }
         },
         "lint": {
@@ -128,5 +128,5 @@
       }
     }
   },
-  "defaultProject": "rocket-ui"
+  "defaultProject": "ng-rocket-ui"
 }
