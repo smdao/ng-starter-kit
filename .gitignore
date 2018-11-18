@@ -1,32 +1,56 @@
-# Prerequisites
-*.d
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Compiled output
+/dist
+/tmp
+/out-tsc
 
-# Precompiled Headers
-*.gch
-*.pch
+# Dependencies
+/node_modules
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Cordova
+/www
+/plugins
+/platforms
 
-# Fortran module files
-*.mod
-*.smod
+# IDEs and editors
+.idea/*
+!.idea/runConfigurations/
+!.idea/codeStyleSettings.xml
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+xcuserdata/
+*.sublime-workspace
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# Executables
-*.exe
-*.out
-*.app
+# Maven
+/target
+/log
+
+# Misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+/reports
+/src/translations/template.*
+/src/environments/.env.*
+
+# System Files
+.DS_Store
+Thumbs.db
+
+package-lock\.json
