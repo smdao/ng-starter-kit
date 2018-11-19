@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { extract } from '@app/core';
 import { HomeComponent } from './home.component';
-import { Shell } from '@app/shell/shell.service';
+import { Shell } from '@app/features/`shell/shell.service';
 
 const routes: Routes = [
   Shell.childRoutes([

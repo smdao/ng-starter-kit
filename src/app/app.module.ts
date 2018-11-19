@@ -9,11 +9,11 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
-import { SharedModule } from '@app/shared';
+import { SharedModule } from '@app/features/`shared';
 import { HomeModule } from './features/home/home.module';
-import { ShellModule } from './shell/shell.module';
+import { ShellModule } from './features/`shell/shell.module';
 import { AboutModule } from './features/about/about.module';
-import { LoginModule } from './login/login.module';
+import { LoginModule } from './auth/login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
