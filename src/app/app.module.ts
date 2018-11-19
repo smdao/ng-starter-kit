@@ -17,9 +17,12 @@ import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { CoreUISamplesModule } from './samples/core-ui/core-ui.module';
+// External Libs
 import { PrimeNgModule } from './`external-libs/prime-ng.module';
 import { CoreUIModule } from './`external-libs/core-ui.module';
+
+// Samples
+import { CoreUISamplesModule } from './samples/core-ui/core-ui.module';
 
 @NgModule({
   // Imports
@@ -37,11 +40,10 @@ import { CoreUIModule } from './`external-libs/core-ui.module';
     AboutModule,
     LoginModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
-    // CoreUI
+    // External Libs
     CoreUIModule,
-    // PrimeNG
     PrimeNgModule,
-    // CoreUI Samples
+    // Samples
     CoreUISamplesModule
   ],
   // Declarations
