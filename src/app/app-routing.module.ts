@@ -7,7 +7,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: './samples/core-ui/core-ui.module#CoreUIModule'
+        loadChildren: './samples/core-ui/core-ui.module#CoreUISamplesModule'
       }]
   }
 ];

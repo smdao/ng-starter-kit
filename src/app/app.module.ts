@@ -17,7 +17,8 @@ import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { CoreUIModule } from './samples/core-ui/core-ui.module';
+import { CoreUISamplesModule } from './samples/core-ui/core-ui.module';
+import { PrimeNgModule } from './`libs/prime-ng.module';
 
 @NgModule({
   // Imports
@@ -36,7 +37,9 @@ import { CoreUIModule } from './samples/core-ui/core-ui.module';
     LoginModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
     // CoreUI
-    CoreUIModule
+    CoreUISamplesModule,
+    // PrimeNG
+    PrimeNgModule
   ],
   // Declarations
   declarations: [
