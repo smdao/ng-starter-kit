@@ -48,7 +48,7 @@ const routes: Routes = [
           title: 'Register Page'
         }
       },
-          {
+      {
         path: 'base',
         loadChildren: './views/base/base.module#BaseModule'
       },
@@ -89,5 +89,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-
 export class CoreUIoutingModule {}

@@ -8,7 +8,8 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: './samples/core-ui/core-ui.module#CoreUISamplesModule'
-      }]
+      }
+    ]
   }
 ];
 

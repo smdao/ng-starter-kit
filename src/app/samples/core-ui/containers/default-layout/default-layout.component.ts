@@ -6,7 +6,6 @@ import { navItems } from './../../_nav';
   templateUrl: './default-layout.component.html'
 })
 export class DefaultLayoutComponent {
-
   navItems = navItems;
   sidebarMinimized = true;
   element: HTMLElement = document.body;
@@ -25,5 +24,4 @@ export class DefaultLayoutComponent {
       attributes: true
     });
   }
-
 }

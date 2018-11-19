@@ -42,9 +42,7 @@ import { PrimeNgModule } from './`libs/prime-ng.module';
     PrimeNgModule
   ],
   // Declarations
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   // Providers
   providers: [
     {

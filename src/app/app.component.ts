@@ -16,7 +16,6 @@ const log = new Logger('App');
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
   /**
    *
    * @param router
@@ -49,7 +48,7 @@ export class AppComponent implements OnInit {
 
     const onNavigationEnd = this.router.events.pipe(filter(event => event instanceof NavigationEnd));
 
-    this.router.events.subscribe((evt) => {
+    this.router.events.subscribe(evt => {
       if (!(evt instanceof NavigationEnd)) {
         return;
       }

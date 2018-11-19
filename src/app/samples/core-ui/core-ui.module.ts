@@ -44,16 +44,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule,
+    ChartsModule
   ],
-  declarations: [
-    CoreUIComponent,
-    ...APP_CONTAINERS,
-    P404Component,
-    P500Component,
-    LoginComponent,
-    RegisterComponent
-  ]
+  declarations: [CoreUIComponent, ...APP_CONTAINERS, P404Component, P500Component, LoginComponent, RegisterComponent]
 })
-
 export class CoreUISamplesModule {}
