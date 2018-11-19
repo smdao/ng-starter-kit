@@ -5,10 +5,16 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ShellComponent } from './shell.component';
-import { HeaderComponent } from './header/header.component';
+import { CoreUIModule } from '@app/`external-libs/core-ui.module';
 
 @NgModule({
-  imports: [CommonModule, TranslateModule, NgbModule, RouterModule],
-  declarations: [HeaderComponent, ShellComponent]
+  imports: [
+    CommonModule,
+    TranslateModule,
+    NgbModule,
+    RouterModule,
+    CoreUIModule
+  ],
+  declarations: [ShellComponent]
 })
 export class ShellModule {}
