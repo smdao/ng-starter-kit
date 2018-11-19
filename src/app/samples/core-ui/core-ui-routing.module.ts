@@ -89,4 +89,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class CoreUIoutingModule {}
+export class CoreUIRoutingModule {}
