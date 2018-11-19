@@ -16,6 +16,15 @@ const log = new Logger('App');
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+  /**
+   *
+   * @param router
+   * @param activatedRoute
+   * @param titleService
+   * @param translateService
+   * @param i18nService
+   */
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -24,6 +33,9 @@ export class AppComponent implements OnInit {
     private i18nService: I18nService
   ) {}
 
+  /**
+   *
+   */
   ngOnInit() {
     // Setup logger
     if (environment.production) {
@@ -36,6 +48,13 @@ export class AppComponent implements OnInit {
     this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
 
     const onNavigationEnd = this.router.events.pipe(filter(event => event instanceof NavigationEnd));
+
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0);
+    });
 
     // Change page title on navigation or language change, based on route data
     merge(this.translateService.onLangChange, onNavigationEnd)
