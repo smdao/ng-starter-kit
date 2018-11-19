@@ -6,10 +6,15 @@ import { navItems } from './../../_nav';
   templateUrl: './default-layout.component.html'
 })
 export class DefaultLayoutComponent {
-  public navItems = navItems;
-  public sidebarMinimized = true;
+  navItems = navItems;
+  sidebarMinimized = true;
+  element: HTMLElement = document.body;
+
   private changes: MutationObserver;
-  public element: HTMLElement = document.body;
+
+  /**
+   *
+   */
   constructor() {
     this.changes = new MutationObserver(mutations => {
       this.sidebarMinimized = document.body.classList.contains('sidebar-minimized');

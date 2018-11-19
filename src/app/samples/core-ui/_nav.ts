@@ -1,7 +1,7 @@
 export const navItems = [
   {
     name: 'Dashboard',
-    url: '/dashboard',
+    url: '/samples/core-ui/dashboard',
     icon: 'icon-speedometer',
     badge: {
       variant: 'info',
@@ -14,12 +14,12 @@ export const navItems = [
   },
   {
     name: 'Colors',
-    url: '/theme/colors',
+    url: '/samples/core-ui/theme/colors',
     icon: 'icon-drop'
   },
   {
     name: 'Typography',
-    url: '/theme/typography',
+    url: '/samples/core-ui/theme/typography',
     icon: 'icon-pencil'
   },
   {
@@ -28,101 +28,101 @@ export const navItems = [
   },
   {
     name: 'Base',
-    url: '/base',
+    url: '/samples/core-ui/base',
     icon: 'icon-puzzle',
     children: [
       {
         name: 'Cards',
-        url: '/base/cards',
+        url: '/samples/core-ui/base/cards',
         icon: 'icon-puzzle'
       },
       {
         name: 'Carousels',
-        url: '/base/carousels',
+        url: '/samples/core-ui/base/carousels',
         icon: 'icon-puzzle'
       },
       {
         name: 'Collapses',
-        url: '/base/collapses',
+        url: '/samples/core-ui/base/collapses',
         icon: 'icon-puzzle'
       },
       {
         name: 'Forms',
-        url: '/base/forms',
+        url: '/samples/core-ui/base/forms',
         icon: 'icon-puzzle'
       },
       {
         name: 'Pagination',
-        url: '/base/paginations',
+        url: '/samples/core-ui/base/paginations',
         icon: 'icon-puzzle'
       },
       {
         name: 'Popovers',
-        url: '/base/popovers',
+        url: '/samples/core-ui/base/popovers',
         icon: 'icon-puzzle'
       },
       {
         name: 'Progress',
-        url: '/base/progress',
+        url: '/samples/core-ui/base/progress',
         icon: 'icon-puzzle'
       },
       {
         name: 'Switches',
-        url: '/base/switches',
+        url: '/samples/core-ui/base/switches',
         icon: 'icon-puzzle'
       },
       {
         name: 'Tables',
-        url: '/base/tables',
+        url: '/samples/core-ui/base/tables',
         icon: 'icon-puzzle'
       },
       {
         name: 'Tabs',
-        url: '/base/tabs',
+        url: '/samples/core-ui/base/tabs',
         icon: 'icon-puzzle'
       },
       {
         name: 'Tooltips',
-        url: '/base/tooltips',
+        url: '/samples/core-ui/base/tooltips',
         icon: 'icon-puzzle'
       }
     ]
   },
   {
     name: 'Buttons',
-    url: '/buttons',
+    url: '/samples/core-ui/buttons',
     icon: 'icon-cursor',
     children: [
       {
         name: 'Buttons',
-        url: '/buttons/buttons',
+        url: '/samples/core-ui/buttons/buttons',
         icon: 'icon-cursor'
       },
       {
         name: 'Dropdowns',
-        url: '/buttons/dropdowns',
+        url: '/samples/core-ui/buttons/dropdowns',
         icon: 'icon-cursor'
       },
       {
         name: 'Brand Buttons',
-        url: '/buttons/brand-buttons',
+        url: '/samples/core-ui/buttons/brand-buttons',
         icon: 'icon-cursor'
       }
     ]
   },
   {
     name: 'Charts',
-    url: '/charts',
+    url: '/samples/core-ui/charts',
     icon: 'icon-pie-chart'
   },
   {
     name: 'Icons',
-    url: '/icons',
+    url: '/samples/core-ui/icons',
     icon: 'icon-star',
     children: [
       {
         name: 'CoreUI Icons',
-        url: '/icons/coreui-icons',
+        url: '/samples/core-ui/icons/coreui-icons',
         icon: 'icon-star',
         badge: {
           variant: 'success',
@@ -131,12 +131,12 @@ export const navItems = [
       },
       {
         name: 'Flags',
-        url: '/icons/flags',
+        url: '/samples/core-ui/icons/flags',
         icon: 'icon-star'
       },
       {
         name: 'Font Awesome',
-        url: '/icons/font-awesome',
+        url: '/samples/core-ui/icons/font-awesome',
         icon: 'icon-star',
         badge: {
           variant: 'secondary',
@@ -145,36 +145,36 @@ export const navItems = [
       },
       {
         name: 'Simple Line Icons',
-        url: '/icons/simple-line-icons',
+        url: '/samples/core-ui/icons/simple-line-icons',
         icon: 'icon-star'
       }
     ]
   },
   {
     name: 'Notifications',
-    url: '/notifications',
+    url: '/samples/core-ui/notifications',
     icon: 'icon-bell',
     children: [
       {
         name: 'Alerts',
-        url: '/notifications/alerts',
+        url: '/samples/core-ui/notifications/alerts',
         icon: 'icon-bell'
       },
       {
         name: 'Badges',
-        url: '/notifications/badges',
+        url: '/samples/core-ui/notifications/badges',
         icon: 'icon-bell'
       },
       {
         name: 'Modals',
-        url: '/notifications/modals',
+        url: '/samples/core-ui/notifications/modals',
         icon: 'icon-bell'
       }
     ]
   },
   {
     name: 'Widgets',
-    url: '/widgets',
+    url: '/samples/core-ui/widgets',
     icon: 'icon-calculator',
     badge: {
       variant: 'info',
@@ -190,27 +190,27 @@ export const navItems = [
   },
   {
     name: 'Pages',
-    url: '/pages',
+    url: '/samples/core-ui/pages',
     icon: 'icon-star',
     children: [
       {
         name: 'Login',
-        url: '/login',
+        url: '/samples/core-ui/login',
         icon: 'icon-star'
       },
       {
         name: 'Register',
-        url: '/register',
+        url: '/samples/core-ui/register',
         icon: 'icon-star'
       },
       {
         name: 'Error 404',
-        url: '/404',
+        url: '/samples/core-ui/404',
         icon: 'icon-star'
       },
       {
         name: 'Error 500',
-        url: '/500',
+        url: '/samples/core-ui/500',
         icon: 'icon-star'
       }
     ]
