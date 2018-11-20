@@ -13,13 +13,14 @@ import { SharedModule } from '@app/features/`shared';
 import { HomeModule } from './features/home/home.module';
 import { ShellModule } from './features/`shell/shell.module';
 import { AboutModule } from './features/about/about.module';
-import { LoginModule } from './auth/login/login.module';
+import { LoginModule } from './features/`auth/login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 // External Libs
 import { PrimeNgModule } from './`external-libs/prime-ng.module';
 import { CoreUIModule } from './`external-libs/core-ui.module';
+import { NgMaterialModule } from './`external-libs/material.module';
 
 // Samples
 import { CoreUISamplesModule } from './samples/core-ui/core-ui.module';
@@ -43,6 +44,7 @@ import { CoreUISamplesModule } from './samples/core-ui/core-ui.module';
     // External Libs
     CoreUIModule,
     PrimeNgModule,
+    NgMaterialModule,
     // Samples
     CoreUISamplesModule
   ],

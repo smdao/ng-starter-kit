@@ -20,7 +20,7 @@ const credentialsKey = 'credentials';
  * The Credentials interface as well as login/logout methods should be replaced with proper implementation.
  */
 @Injectable()
-export class AuthenticationService {
+export class AuthService {
   private _credentials: Credentials | null;
 
   constructor() {
