@@ -13,7 +13,7 @@ import { SharedModule } from '@app/features/`shared';
 import { HomeModule } from './features/home/home.module';
 import { ShellModule } from './features/`shell/shell.module';
 import { AboutModule } from './features/about/about.module';
-import { LoginModule } from './auth/login/login.module';
+import { LoginModule } from './features/`auth/login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
