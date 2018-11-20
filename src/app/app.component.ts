@@ -7,6 +7,7 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
 import { Logger, I18nService } from '@app/core';
+import { navItems } from '@app/providers/_nav';
 
 const log = new Logger('App');
 
@@ -16,6 +17,12 @@ const log = new Logger('App');
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  navItems = navItems;
+  sidebarMinimized = true;
+  element: HTMLElement = document.body;
+
+  private changes: MutationObserver;
+
   /**
    *
    * @param router
@@ -42,6 +49,14 @@ export class AppComponent implements OnInit {
     }
 
     log.debug('init');
+
+    this.changes = new MutationObserver(mutations => {
+      this.sidebarMinimized = document.body.classList.contains('sidebar-minimized');
+    });
+
+    this.changes.observe(<Element>this.element, {
+      attributes: true
+    });
 
     // Setup translations
     this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
