@@ -9,16 +9,20 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
-import { SharedModule } from '@app/shared';
-import { HomeModule } from './home/home.module';
-import { ShellModule } from './shell/shell.module';
-import { AboutModule } from './about/about.module';
-import { LoginModule } from './login/login.module';
+import { SharedModule } from '@app/features/`shared';
+import { HomeModule } from './features/home/home.module';
+import { ShellModule } from './features/`shell/shell.module';
+import { AboutModule } from './features/about/about.module';
+import { LoginModule } from './auth/login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+// External Libs
+import { PrimeNgModule } from './`external-libs/prime-ng.module';
+import { CoreUIModule } from './`external-libs/core-ui.module';
+
+// Samples
 import { CoreUISamplesModule } from './samples/core-ui/core-ui.module';
-import { PrimeNgModule } from './`libs/prime-ng.module';
 
 @NgModule({
   // Imports
@@ -36,10 +40,11 @@ import { PrimeNgModule } from './`libs/prime-ng.module';
     AboutModule,
     LoginModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
-    // CoreUI
-    CoreUISamplesModule,
-    // PrimeNG
-    PrimeNgModule
+    // External Libs
+    CoreUIModule,
+    PrimeNgModule,
+    // Samples
+    CoreUISamplesModule
   ],
   // Declarations
   declarations: [AppComponent],

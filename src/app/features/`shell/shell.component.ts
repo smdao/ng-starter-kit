@@ -1,11 +1,14 @@
-import { Component, Input } from '@angular/core';
-import { navItems } from '@app/samples/core-ui/_nav';
+import { Component, OnInit } from '@angular/core';
+import { navItems } from '@app/providers/_nav';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './default-layout.component.html'
+  selector: 'app-shell',
+  templateUrl: './shell.component.html',
+  styleUrls: ['./shell.component.scss']
 })
-export class DefaultLayoutComponent {
+
+export class ShellComponent implements OnInit {
+
   navItems = navItems;
   sidebarMinimized = true;
   element: HTMLElement = document.body;
@@ -24,4 +27,6 @@ export class DefaultLayoutComponent {
       attributes: true
     });
   }
+
+  ngOnInit() {}
 }
