@@ -8,13 +8,7 @@ import { ShellComponent } from './shell.component';
 import { CoreUIModule } from '@app/`external-libs/core-ui.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    TranslateModule,
-    NgbModule,
-    RouterModule,
-    CoreUIModule
-  ],
+  imports: [CommonModule, TranslateModule, NgbModule, RouterModule, CoreUIModule],
   declarations: [ShellComponent]
 })
 export class ShellModule {}

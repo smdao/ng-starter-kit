@@ -9,8 +9,9 @@ import { QuoteService } from './quote.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-
 export class HomeComponent implements OnInit {
+  quote: string;
+  isLoading: boolean;
 
   public themeColors(): void {
     Array.from(document.querySelectorAll('.theme-color')).forEach(function(el) {

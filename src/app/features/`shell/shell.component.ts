@@ -6,9 +6,7 @@ import { navItems } from '@app/providers/_nav';
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss']
 })
-
 export class ShellComponent implements OnInit {
-
   navItems = navItems;
   sidebarMinimized = true;
   element: HTMLElement = document.body;
