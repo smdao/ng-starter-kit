@@ -6,7 +6,7 @@ import { merge } from 'rxjs';
 import { filter, map, mergeMap } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
-import { Logger, I18nService } from '@app/core';
+import { Logger } from '@app/core';
 import { navItems } from '@app/providers/_nav';
 
 const log = new Logger('App');
@@ -35,8 +35,7 @@ export class AppComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
-    private translateService: TranslateService,
-    private i18nService: I18nService
+    private translateService: TranslateService
   ) {}
 
   /**
@@ -57,9 +56,6 @@ export class AppComponent implements OnInit {
     this.changes.observe(<Element>this.element, {
       attributes: true
     });
-
-    // Setup translations
-    this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
 
     const onNavigationEnd = this.router.events.pipe(filter(event => event instanceof NavigationEnd));
 
