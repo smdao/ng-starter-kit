@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { finalize } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
-import { Logger, AuthenticationService } from '@app/core';
+import { Logger, AuthService } from '@app/core';
 
 const log = new Logger('Login');
 
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthService
   ) {
     this.createForm();
   }
