@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 // External Libs
 import { PrimeNgModule } from './`external-libs/prime-ng.module';
 import { CoreUIModule } from './`external-libs/core-ui.module';
+import { NgMaterialModule } from './`external-libs/material.module';
 
 // Samples
 import { CoreUISamplesModule } from './samples/core-ui/core-ui.module';
@@ -43,6 +44,7 @@ import { CoreUISamplesModule } from './samples/core-ui/core-ui.module';
     // External Libs
     CoreUIModule,
     PrimeNgModule,
+    NgMaterialModule,
     // Samples
     CoreUISamplesModule
   ],
