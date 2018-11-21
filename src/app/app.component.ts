@@ -7,7 +7,7 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
 import { Logger } from '@app/core';
-import { navItems } from '@app/providers/_nav';
+import { navItems } from '@app/providers/nav.provider';
 
 const log = new Logger('App');
 
