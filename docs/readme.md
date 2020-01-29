@@ -1,4 +1,4 @@
-# ng-rocket-ui
+# ng-starter-kit
 
 Welcome to the project documentation!
 

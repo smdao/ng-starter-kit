@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { TranslateService } from '@ngx-translate/core';
 import { merge } from 'rxjs';
 import { filter, map, mergeMap } from 'rxjs/operators';
 
@@ -28,14 +27,12 @@ export class AppComponent implements OnInit {
    * @param router
    * @param activatedRoute
    * @param titleService
-   * @param translateService
    * @param i18nService
    */
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private titleService: Title,
-    private translateService: TranslateService
+    private titleService: Title
   ) {}
 
   /**
@@ -67,7 +64,7 @@ export class AppComponent implements OnInit {
     });
 
     // Change page title on navigation or language change, based on route data
-    merge(this.translateService.onLangChange, onNavigationEnd)
+    merge(onNavigationEnd)
       .pipe(
         map(() => {
           let route = this.activatedRoute;
@@ -82,7 +79,7 @@ export class AppComponent implements OnInit {
       .subscribe(event => {
         const title = event['title'];
         if (title) {
-          this.titleService.setTitle(this.translateService.instant(title));
+          this.titleService.setTitle(title);
         }
       });
   }

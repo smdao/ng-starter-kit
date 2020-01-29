@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { TranslateModule } from '@ngx-translate/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { environment } from '@env/environment';
@@ -32,8 +30,6 @@ import { CoreUISamplesModule } from './samples/core-ui/core-ui.module';
     ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production }),
     FormsModule,
     HttpClientModule,
-    TranslateModule.forRoot(),
-    NgbModule,
     CoreModule,
     SharedModule,
     ShellModule,

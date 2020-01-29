@@ -6,6 +6,7 @@ import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
   templateUrl: 'widgets.component.html'
 })
 export class WidgetsComponent {
+
   // lineChart1
   public lineChart1Data: Array<any> = [
     {
@@ -21,28 +22,25 @@ export class WidgetsComponent {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [
-        {
-          gridLines: {
-            color: 'transparent',
-            zeroLineColor: 'transparent'
-          },
-          ticks: {
-            fontSize: 2,
-            fontColor: 'transparent'
-          }
+      xAxes: [{
+        gridLines: {
+          color: 'transparent',
+          zeroLineColor: 'transparent'
+        },
+        ticks: {
+          fontSize: 2,
+          fontColor: 'transparent',
         }
-      ],
-      yAxes: [
-        {
+
+      }],
+      yAxes: [{
+        display: false,
+        ticks: {
           display: false,
-          ticks: {
-            display: false,
-            min: 40 - 5,
-            max: 84 + 5
-          }
+          min: 40 - 5,
+          max: 84 + 5,
         }
-      ]
+      }],
     },
     elements: {
       line: {
@@ -51,16 +49,15 @@ export class WidgetsComponent {
       point: {
         radius: 4,
         hitRadius: 10,
-        hoverRadius: 4
-      }
+        hoverRadius: 4,
+      },
     },
     legend: {
       display: false
     }
   };
   public lineChart1Colours: Array<any> = [
-    {
-      // grey
+    { // grey
       backgroundColor: getStyle('--primary'),
       borderColor: 'rgba(255,255,255,.55)'
     }
@@ -83,28 +80,25 @@ export class WidgetsComponent {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [
-        {
-          gridLines: {
-            color: 'transparent',
-            zeroLineColor: 'transparent'
-          },
-          ticks: {
-            fontSize: 2,
-            fontColor: 'transparent'
-          }
+      xAxes: [{
+        gridLines: {
+          color: 'transparent',
+          zeroLineColor: 'transparent'
+        },
+        ticks: {
+          fontSize: 2,
+          fontColor: 'transparent',
         }
-      ],
-      yAxes: [
-        {
+
+      }],
+      yAxes: [{
+        display: false,
+        ticks: {
           display: false,
-          ticks: {
-            display: false,
-            min: 1 - 5,
-            max: 34 + 5
-          }
+          min: 1 - 5,
+          max: 34 + 5,
         }
-      ]
+      }],
     },
     elements: {
       line: {
@@ -114,22 +108,22 @@ export class WidgetsComponent {
       point: {
         radius: 4,
         hitRadius: 10,
-        hoverRadius: 4
-      }
+        hoverRadius: 4,
+      },
     },
     legend: {
       display: false
     }
   };
   public lineChart2Colours: Array<any> = [
-    {
-      // grey
+    { // grey
       backgroundColor: getStyle('--info'),
       borderColor: 'rgba(255,255,255,.55)'
     }
   ];
   public lineChart2Legend = false;
   public lineChart2Type = 'line';
+
 
   // lineChart3
   public lineChart3Data: Array<any> = [
@@ -146,16 +140,12 @@ export class WidgetsComponent {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [
-        {
-          display: false
-        }
-      ],
-      yAxes: [
-        {
-          display: false
-        }
-      ]
+      xAxes: [{
+        display: false
+      }],
+      yAxes: [{
+        display: false
+      }]
     },
     elements: {
       line: {
@@ -164,8 +154,8 @@ export class WidgetsComponent {
       point: {
         radius: 0,
         hitRadius: 10,
-        hoverRadius: 4
-      }
+        hoverRadius: 4,
+      },
     },
     legend: {
       display: false
@@ -174,37 +164,22 @@ export class WidgetsComponent {
   public lineChart3Colours: Array<any> = [
     {
       backgroundColor: 'rgba(255,255,255,.2)',
-      borderColor: 'rgba(255,255,255,.55)'
+      borderColor: 'rgba(255,255,255,.55)',
     }
   ];
   public lineChart3Legend = false;
   public lineChart3Type = 'line';
 
+
   // barChart1
   public barChart1Data: Array<any> = [
     {
       data: [78, 81, 80, 45, 34, 12, 40, 78, 81, 80, 45, 34, 12, 40, 12, 40],
-      label: 'Series A'
+      label: 'Series A',
+      barPercentage: 0.6
     }
   ];
-  public barChart1Labels: Array<any> = [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    '11',
-    '12',
-    '13',
-    '14',
-    '15',
-    '16'
-  ];
+  public barChart1Labels: Array<any> = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16'];
   public barChart1Options: any = {
     tooltips: {
       enabled: false,
@@ -212,17 +187,12 @@ export class WidgetsComponent {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [
-        {
-          display: false,
-          barPercentage: 0.6
-        }
-      ],
-      yAxes: [
-        {
-          display: false
-        }
-      ]
+      xAxes: [{
+        display: false,
+      }],
+      yAxes: [{
+        display: false
+      }]
     },
     legend: {
       display: false
@@ -244,20 +214,7 @@ export class WidgetsComponent {
       label: 'Series A'
     }
   ];
-  public lineChart4Labels: Array<any> = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'
-  ];
+  public lineChart4Labels: Array<any> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   public lineChart4Options: any = {
     tooltips: {
       enabled: false,
@@ -265,17 +222,13 @@ export class WidgetsComponent {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [
-        {
-          display: false,
-          points: false
-        }
-      ],
-      yAxes: [
-        {
-          display: false
-        }
-      ]
+      xAxes: [{
+        display: false,
+        points: false,
+      }],
+      yAxes: [{
+        display: false,
+      }]
     },
     elements: { point: { radius: 0 } },
     legend: {
@@ -292,27 +245,16 @@ export class WidgetsComponent {
   public lineChart4Legend = false;
   public lineChart4Type = 'line';
 
+
   // barChart2
   public barChart2Data: Array<any> = [
     {
       data: [4, 18, 9, 17, 34, 22, 11, 3, 15, 12, 18, 9],
-      label: 'Series A'
+      label: 'Series A',
+      barPercentage: 0.6
     }
   ];
-  public barChart2Labels: Array<any> = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'
-  ];
+  public barChart2Labels: Array<any> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   public barChart2Options: any = {
     tooltips: {
       enabled: false,
@@ -320,20 +262,15 @@ export class WidgetsComponent {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [
-        {
-          display: false,
-          barPercentage: 0.6
+      xAxes: [{
+        display: false,
+      }],
+      yAxes: [{
+        display: false,
+        ticks: {
+          beginAtZero: true,
         }
-      ],
-      yAxes: [
-        {
-          display: false,
-          ticks: {
-            beginAtZero: true
-          }
-        }
-      ]
+      }]
     },
     legend: {
       display: false
@@ -348,6 +285,7 @@ export class WidgetsComponent {
   public barChart2Legend = false;
   public barChart2Type = 'bar';
 
+
   // barChart3
   public barChart3Data: Array<any> = [
     {
@@ -355,20 +293,7 @@ export class WidgetsComponent {
       label: 'Series A'
     }
   ];
-  public barChart3Labels: Array<any> = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'
-  ];
+  public barChart3Labels: Array<any> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   public barChart3Options: any = {
     tooltips: {
       enabled: false,
@@ -376,16 +301,12 @@ export class WidgetsComponent {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [
-        {
-          display: false
-        }
-      ],
-      yAxes: [
-        {
-          display: false
-        }
-      ]
+      xAxes: [{
+        display: false
+      }],
+      yAxes: [{
+        display: false
+      }]
     },
     legend: {
       display: false
@@ -415,6 +336,7 @@ export class WidgetsComponent {
   public barChart3Legend = false;
   public barChart3Type = 'bar';
 
+
   // lineChart5
   public lineChart5Data: Array<any> = [
     {
@@ -430,17 +352,13 @@ export class WidgetsComponent {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [
-        {
-          display: false,
-          points: false
-        }
-      ],
-      yAxes: [
-        {
-          display: false
-        }
-      ]
+      xAxes: [{
+        display: false,
+        points: false,
+      }],
+      yAxes: [{
+        display: false,
+      }]
     },
     elements: { point: { radius: 0 } },
     legend: {

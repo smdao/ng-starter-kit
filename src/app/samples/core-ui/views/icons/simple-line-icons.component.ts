@@ -4,5 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: 'simple-line-icons.component.html'
 })
 export class SimpleLineIconsComponent {
-  constructor() {}
+
+  constructor() { }
+
 }

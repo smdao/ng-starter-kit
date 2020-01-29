@@ -4,5 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: 'font-awesome.component.html'
 })
 export class FontAwesomeComponent {
-  constructor() {}
+
+  constructor() { }
+
 }

@@ -17,30 +17,33 @@
           <alert type="info">
             <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
           </alert>
-          <alert type="warning"> <strong>Warning!</strong> Better check yourself, you're not looking too good. </alert>
-          <alert type="danger"> <strong>Oh snap!</strong> Change a few things up and try submitting again. </alert>
+          <alert type="warning">
+            <strong>Warning!</strong> Better check yourself, you're not looking too good.
+          </alert>
+          <alert type="danger">
+            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+          </alert>
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header"><strong>Alerts</strong> <small>link</small></div>
+        <div class="card-header">
+          <strong>Alerts</strong>
+          <small>link</small>
+        </div>
         <div class="card-body">
           <alert type="success">
-            <strong>Well done!</strong> You successfully read
-            <a href="#" class="alert-link">this important alert message</a>.
+            <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
           </alert>
           <alert type="info">
-            <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not
-            super important.
+            <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
           </alert>
           <alert type="warning">
-            <strong>Warning!</strong> Better check yourself, you're
-            <a href="#" class="alert-link">not looking too good</a>.
+            <strong>Warning!</strong> Better check yourself, you're <a href="#" class="alert-link">not looking too good</a>.
           </alert>
           <alert type="danger">
-            <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting
-            again.
+            <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
           </alert>
         </div>
       </div>
@@ -49,14 +52,13 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header"><strong>Alerts</strong> <small>additional content</small></div>
+        <div class="card-header">
+          <strong>Alerts</strong> <small>additional content</small>
+        </div>
         <div class="card-body">
           <alert type="success">
             <h4 class="alert-heading">Well done!</h4>
-            <p>
-              Aww yeah, you successfully read this important alert message. This example text is going to run a bit
-              longer so that you can see how spacing within an alert works with this kind of content.
-            </p>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
             <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
           </alert>
         </div>
@@ -64,7 +66,9 @@
     </div>
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header"><strong>Alerts</strong> <small>dismissing</small></div>
+        <div class="card-header">
+          <strong>Alerts</strong> <small>dismissing</small>
+        </div>
         <div class="card-body">
           <div *ngFor="let alert of alerts">
             <alert [type]="alert.type" [dismissible]="dismissible">{{ alert.msg }}</alert>
@@ -78,7 +82,9 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header"><strong>Alerts</strong> <small>dynamic html</small></div>
+        <div class="card-header">
+          <strong>Alerts</strong> <small>dynamic html</small>
+        </div>
         <div class="card-body">
           <div *ngFor="let alert of alertsHtml">
             <alert [type]="alert.type"><span [innerHtml]="alert.msg"></span></alert>
@@ -88,14 +94,18 @@
     </div>
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header"><strong>Alerts</strong> <small>dynamic content</small></div>
+        <div class="card-header">
+          <strong>Alerts</strong> <small>dynamic content</small>
+        </div>
         <div class="card-body">
-          <alert type="success">{{ messages[index] }}</alert>
+          <alert type="success">{{messages[index]}}</alert>
 
-          <div *ngIf="index !== messages.length - 1; else: elseBlock">
+          <div *ngIf="index !== messages.length -1; else elseBlock">
             <button class="btn btn-primary" (click)="changeText()">Change text</button>
           </div>
-          <ng-template #elseBlock> <button class="btn btn-primary" (click)="index = 0">Reset</button> </ng-template>
+          <ng-template #elseBlock>
+            <button class="btn btn-primary" (click)="index = 0">Reset</button>
+          </ng-template>
         </div>
       </div>
     </div>
@@ -103,7 +113,9 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header"><strong>Alerts</strong> <small>dismiss on timeout</small></div>
+        <div class="card-header">
+          <strong>Alerts</strong> <small>dismiss on timeout</small>
+        </div>
         <div class="card-body">
           <alert type="success" dismissOnTimeout="5000">
             <strong>Well done!</strong> You successfully read this important alert message.
@@ -119,12 +131,14 @@
     </div>
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header"><strong>Alerts</strong> <small>global styling</small></div>
+        <div class="card-header">
+          <strong>Alerts</strong> <small>global styling</small>
+        </div>
         <div class="card-body">
           <style>
             .alert-md-color {
-              background-color: #7b1fa2;
-              border-color: #4a148c;
+              background-color: #7B1FA2;
+              border-color: #4A148C;
               color: #fff;
             }
           </style>
@@ -138,7 +152,9 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header"><strong>Alerts</strong> <small>component level styling</small></div>
+        <div class="card-header">
+          <strong>Alerts</strong> <small>component level styling</small>
+        </div>
         <div class="card-body">
           <alert type="md-local">
             <strong>Well done!</strong> You successfully read this important alert message.
@@ -148,12 +164,17 @@
     </div>
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header"><strong>Alerts</strong> <small>configuring defaults</small></div>
+        <div class="card-header">
+          <strong>Alerts</strong> <small>configuring defaults</small>
+        </div>
         <div class="card-body">
-          <alert> <strong>Well done!</strong> You successfully read this important alert message. </alert>
+          <alert>
+            <strong>Well done!</strong> You successfully read this important alert message.
+          </alert>
           <alert type="info">
             <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
           </alert>
+
         </div>
       </div>
     </div>

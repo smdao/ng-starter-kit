@@ -1,10 +1,11 @@
-import { Component, SecurityContext } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import {Component, SecurityContext} from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   templateUrl: 'tooltips.component.html'
 })
 export class TooltipsComponent {
+
   constructor(sanitizer: DomSanitizer) {
     this.html = sanitizer.sanitize(SecurityContext.HTML, this.html);
   }

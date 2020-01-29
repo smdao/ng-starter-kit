@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
 
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/features/`shared';
@@ -9,7 +8,7 @@ import { HomeComponent } from './home.component';
 import { QuoteService } from './quote.service';
 
 @NgModule({
-  imports: [CommonModule, TranslateModule, CoreModule, SharedModule, HomeRoutingModule],
+  imports: [CommonModule, CoreModule, SharedModule, HomeRoutingModule],
   declarations: [HomeComponent],
   providers: [QuoteService]
 })

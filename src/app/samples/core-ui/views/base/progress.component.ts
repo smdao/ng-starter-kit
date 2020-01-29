@@ -1,9 +1,10 @@
-import { Component, OnDestroy } from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 
 @Component({
   templateUrl: 'progress.component.html'
 })
 export class ProgressComponent implements OnDestroy {
+
   max: number = 200;
   showWarning: boolean;
   dynamic: number;
@@ -43,6 +44,7 @@ export class ProgressComponent implements OnDestroy {
     this.showWarning = type === 'danger' || type === 'warning';
     this.dynamic = value;
     this.type = type;
+
   }
 
   randomStacked(): void {

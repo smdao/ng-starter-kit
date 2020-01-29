@@ -4,5 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: 'typography.component.html'
 })
 export class TypographyComponent {
-  constructor() {}
+
+  constructor() { }
+
 }

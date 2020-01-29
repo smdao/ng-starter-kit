@@ -13,16 +13,17 @@ export function getAlertConfig(): AlertConfig {
   encapsulation: ViewEncapsulation.None,
   styles: [
     `
-      .alert-md-local {
-        background-color: #009688;
-        border-color: #00695c;
-        color: #fff;
-      }
-    `
+  .alert-md-local {
+    background-color: #009688;
+    border-color: #00695C;
+    color: #fff;
+  }
+  `
   ],
   providers: [{ provide: AlertConfig, useFactory: getAlertConfig }]
 })
 export class AlertsComponent {
+
   constructor(sanitizer: DomSanitizer) {
     this.alertsHtml = this.alertsHtml.map((alert: any) => ({
       type: alert.type,
@@ -64,7 +65,7 @@ export class AlertsComponent {
   messages = [
     'You successfully read this important alert message.',
     'Now this text is different from what it was before. Go ahead and click the button one more time',
-    "Well done! Click reset button and you'll see the first message"
+    'Well done! Click reset button and you\'ll see the first message'
   ];
 
   alertsDismiss: any = [];

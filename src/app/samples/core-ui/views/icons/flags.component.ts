@@ -4,5 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: 'flags.component.html'
 })
 export class FlagsComponent {
-  constructor() {}
+
+  constructor() { }
+
 }
