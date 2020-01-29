@@ -1,10 +1,8 @@
-# Ng Rocket UI Starter Kit
+# Ng Starter Kit
 
 Web project starter kit including modern tools and workflow based on
 [angular-cli](https://github.com/angular/angular-cli), ngx-Rocket, Angular Material, PrimeNG, and Core UI for Angular, best practices from the community, a scalable base template and
 a good learning base.
-
-Generated using [Ng Rocket UI](https://github.com/smdao/ng-rocket-ui.git).
 
 ### Benefits
 
