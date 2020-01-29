@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation  } from '@angular/core';
 
 @Component({
   templateUrl: 'paginations.component.html',
@@ -6,10 +6,11 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class PaginationsComponent {
-  constructor() {}
+
+  constructor() { }
 
   totalItems: number = 64;
-  currentPage: number = 4;
+  currentPage: number   = 4;
   smallnumPages: number = 0;
 
   maxSize: number = 5;
@@ -17,7 +18,7 @@ export class PaginationsComponent {
   bigCurrentPage: number = 1;
   numPages: number = 0;
 
-  currentPager: number = 4;
+  currentPager: number   = 4;
 
   setPage(pageNo: number): void {
     this.currentPage = pageNo;

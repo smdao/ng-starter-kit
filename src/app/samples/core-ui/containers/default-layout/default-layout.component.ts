@@ -1,26 +1,15 @@
-import { Component, Input } from '@angular/core';
-import { navItems } from '@app/samples/core-ui/_nav';
+import {Component } from '@angular/core';
+import { navItems } from '../../_nav';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './default-layout.component.html'
 })
 export class DefaultLayoutComponent {
-  navItems = navItems;
-  sidebarMinimized = true;
-  element: HTMLElement = document.body;
+  public sidebarMinimized = false;
+  public navItems = navItems;
 
-  private changes: MutationObserver;
-
-  /**
-   *
-   */
-  constructor() {
-    // this.changes = new MutationObserver(mutations => {
-    //   this.sidebarMinimized = document.body.classList.contains('sidebar-minimized');
-    // });
-    // this.changes.observe(<Element>this.element, {
-    //   attributes: true
-    // });
+  toggleMinimize(e) {
+    this.sidebarMinimized = e;
   }
 }

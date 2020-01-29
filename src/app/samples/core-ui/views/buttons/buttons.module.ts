@@ -15,7 +15,16 @@ import { ButtonsRoutingModule } from './buttons-routing.module';
 // Angular
 
 @NgModule({
-  imports: [CommonModule, ButtonsRoutingModule, BsDropdownModule.forRoot(), FormsModule],
-  declarations: [ButtonsComponent, DropdownsComponent, BrandButtonsComponent]
+  imports: [
+    CommonModule,
+    ButtonsRoutingModule,
+    BsDropdownModule.forRoot(),
+    FormsModule
+  ],
+  declarations: [
+    ButtonsComponent,
+    DropdownsComponent,
+    BrandButtonsComponent
+  ]
 })
-export class ButtonsModule {}
+export class ButtonsModule { }

@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   templateUrl: 'forms.component.html'
 })
 export class FormsComponent {
-  constructor() {}
+
+  constructor() { }
 
   isCollapsed: boolean = false;
   iconCollapse: string = 'icon-arrow-up';
@@ -21,4 +22,5 @@ export class FormsComponent {
     this.isCollapsed = !this.isCollapsed;
     this.iconCollapse = this.isCollapsed ? 'icon-arrow-down' : 'icon-arrow-up';
   }
+
 }

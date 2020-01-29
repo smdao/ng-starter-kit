@@ -4,5 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: 'brand-buttons.component.html'
 })
 export class BrandButtonsComponent {
-  constructor() {}
+
+  constructor() { }
+
 }

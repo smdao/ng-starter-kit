@@ -4,5 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: 'switches.component.html'
 })
 export class SwitchesComponent {
-  constructor() {}
+
+  constructor() { }
+
 }

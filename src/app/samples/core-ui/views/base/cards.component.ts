@@ -4,5 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: 'cards.component.html'
 })
 export class CardsComponent {
-  constructor() {}
+
+  constructor() { }
+
 }

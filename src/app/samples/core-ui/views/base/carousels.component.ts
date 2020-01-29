@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
 
 @Component({
   templateUrl: 'carousels.component.html',
-  providers: [{ provide: CarouselConfig, useValue: { interval: 1500, noPause: true } }]
+  providers: [
+    { provide: CarouselConfig, useValue: { interval: 1500, noPause: false } },
+  ]
 })
-export class CarouselsComponent {
-  myInterval: number = 6000;
+export class CarouselsComponent implements OnDestroy {
+
+  myInterval: number | false = 6000;
   slides: any[] = [];
   activeSlideIndex: number = 0;
   noWrapSlides: boolean = false;
@@ -17,9 +20,15 @@ export class CarouselsComponent {
     }
   }
 
+  ngOnDestroy(): void {
+    this.myInterval = 0;
+    this.noWrapSlides = true;
+    this.myInterval = false;
+  }
+
   addSlide(): void {
     this.slides.push({
-      image: `https://loremflickr.com/900/500/sailing?random=${(this.slides.length % 8) + 1}/`
+      image: `https://lorempixel.com/900/500/abstract/${this.slides.length % 8 + 1}/`
     });
   }
 
@@ -27,4 +36,5 @@ export class CarouselsComponent {
     const toRemove = index ? index : this.activeSlideIndex;
     this.slides.splice(toRemove, 1);
   }
+
 }

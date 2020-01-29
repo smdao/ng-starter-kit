@@ -4,5 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: 'badges.component.html'
 })
 export class BadgesComponent {
-  constructor() {}
+
+  constructor() { }
+
 }

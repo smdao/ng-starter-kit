@@ -16,7 +16,16 @@ import { ModalsComponent } from './modals.component';
 import { NotificationsRoutingModule } from './notifications-routing.module';
 
 @NgModule({
-  imports: [CommonModule, NotificationsRoutingModule, AlertModule.forRoot(), ModalModule.forRoot()],
-  declarations: [AlertsComponent, BadgesComponent, ModalsComponent]
+  imports: [
+    CommonModule,
+    NotificationsRoutingModule,
+    AlertModule.forRoot(),
+    ModalModule.forRoot()
+  ],
+  declarations: [
+    AlertsComponent,
+    BadgesComponent,
+    ModalsComponent
+  ]
 })
-export class NotificationsModule {}
+export class NotificationsModule { }

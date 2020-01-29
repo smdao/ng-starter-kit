@@ -20,7 +20,8 @@
               <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
               <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
               <li class="divider dropdown-divider"></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -29,17 +30,18 @@
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
-          Dropdowns <small>trigger by <code>&lt;a&gt;</code></small>
+          Dropdowns
+          <small>trigger by <code>&lt;a&gt;</code></small>
         </div>
         <div class="card-body">
-          <span dropdown (onShown)="onShown()" (onHidden)="onHidden()" (isOpenChange)="isOpenChange()">
-            <a href dropdownToggle (click)="(false)">Click me for a dropdown, yo!</a>
-            <ul *dropdownMenu class="dropdown-menu">
-              <li *ngFor="let choice of items">
-                <a class="dropdown-item" href="#">{{ choice }}</a>
-              </li>
-            </ul>
-          </span>
+      <span dropdown (onShown)="onShown()" (onHidden)="onHidden()" (isOpenChange)="isOpenChange()">
+        <a href dropdownToggle (click)="false">Click me for a dropdown, yo!</a>
+          <ul *dropdownMenu class="dropdown-menu">
+            <li *ngFor="let choice of items">
+              <a class="dropdown-item" href="#">{{choice}}</a>
+            </li>
+          </ul>
+      </span>
         </div>
       </div>
     </div>
@@ -47,19 +49,26 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header">Dropdowns <small>split button</small></div>
+        <div class="card-header">
+          Dropdowns
+          <small>split button</small>
+        </div>
         <div class="card-body">
           <div class="btn-group" dropdown>
             <button type="button" class="btn btn-danger">Action</button>
             <button type="button" dropdownToggle class="btn btn-danger dropdown-toggle dropdown-toggle-split">
-              <span class="caret"></span> <span class="sr-only">Split button!</span>
+              <span class="caret"></span>
+              <span class="sr-only">Split button!</span>
             </button>
             <ul *dropdownMenu class="dropdown-menu" role="menu">
               <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Something else
+                here</a></li>
               <li class="divider dropdown-divider"></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -67,7 +76,10 @@
     </div>
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header">Dropdowns <small>manual triggers</small></div>
+        <div class="card-header">
+          Dropdowns
+          <small>manual triggers</small>
+        </div>
         <div class="card-body">
           <div class="btn-group" dropdown [isOpen]="status.isOpen" (isOpenChange)="change($event)" placement="top">
             <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
@@ -75,10 +87,13 @@
             </button>
             <ul *dropdownMenu class="dropdown-menu" role="menu">
               <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Something else
+                here</a></li>
               <li class="divider dropdown-divider"></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+              </li>
             </ul>
           </div>
           <button type="button" class="btn btn-primary" (click)="toggleDropdown($event)">Toggle</button>
@@ -89,7 +104,10 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header">Dropdowns <small>disabled menu</small></div>
+        <div class="card-header">
+          Dropdowns
+          <small>disabled menu</small>
+        </div>
         <div class="card-body">
           <div class="btn-group" dropdown [isDisabled]="disabled">
             <button dropdownToggle type="button" class="btn btn-primary dropdownToggle">
@@ -97,19 +115,27 @@
             </button>
             <ul *dropdownMenu class="dropdown-menu" role="menu">
               <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Something else
+                here</a></li>
               <li class="divider dropdown-divider"></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+              </li>
             </ul>
           </div>
-          <button type="button" class="btn btn-warning" (click)="disabled = !disabled">Enable/Disable</button>
+          <button type="button" class="btn btn-warning" (click)="disabled = !disabled">
+            Enable/Disable
+          </button>
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header">Dropdowns <small>menu alignment</small></div>
+        <div class="card-header">
+          Dropdowns
+          <small>menu alignment</small>
+        </div>
         <div class="card-body">
           <div class="btn-group" dropdown placement="bottom right">
             <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
@@ -130,7 +156,10 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header">Dropdowns <small>dropup variation</small></div>
+        <div class="card-header">
+          Dropdowns
+          <small>dropup variation</small>
+        </div>
         <div class="card-body">
           <div class="btn-group" dropdown [dropup]="isDropup">
             <button id="button-dropup" dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
@@ -138,17 +167,21 @@
             </button>
             <ul id="dropdown-dropup" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-dropup">
               <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Something else
+                here</a></li>
               <li class="divider dropdown-divider"></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+              </li>
             </ul>
           </div>
         </div>
         <div class="card-footer">
           <div class="checkbox">
             <label>
-              <input type="checkbox" value="true" [(ngModel)]="isDropup" style="display: inline-block;" />
+              <input type="checkbox" value="true" [(ngModel)]="isDropup"
+                     style="display: inline-block;">
               {{ isDropup ? 'Is dropup' : 'Is dropdown' }}
             </label>
           </div>
@@ -158,7 +191,8 @@
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
-          Dropdowns <small> with <code>autoClose</code></small>
+          Dropdowns
+          <small> with <code>autoClose</code></small>
         </div>
         <div class="card-body">
           <div class="btn-group" dropdown [autoClose]="autoClose">
@@ -167,8 +201,10 @@
             </button>
             <ul *dropdownMenu class="dropdown-menu" role="menu">
               <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Something else
+                here</a></li>
             </ul>
           </div>
         </div>

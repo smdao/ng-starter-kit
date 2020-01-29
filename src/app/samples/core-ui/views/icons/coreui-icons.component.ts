@@ -4,5 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: 'coreui-icons.component.html'
 })
 export class CoreUIIconsComponent {
-  constructor() {}
+
+  constructor() { }
+
 }
