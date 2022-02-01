@@ -21,8 +21,8 @@ import { ShellComponent } from './shell.component';
     AuthModule,
     I18nModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
   ],
   declarations: [ShellComponent],
 })
-export class ShellModule { }
+export class ShellModule {}
