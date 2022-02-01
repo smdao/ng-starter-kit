@@ -4,6 +4,8 @@
 /dist
 /tmp
 /out-tsc
+# Only exists if Bazel was run
+/bazel-out
 
 # Dependencies
 /node_modules
@@ -12,6 +14,11 @@
 /www
 /plugins
 /platforms
+
+# Electron
+/dist-electron
+/dist-packages
+/electron.main.js
 
 # IDEs and editors
 .idea/*
@@ -37,6 +44,7 @@ xcuserdata/
 /log
 
 # Misc
+/.angular/cache
 /.sass-cache
 /connect.lock
 /coverage
@@ -48,9 +56,8 @@ testem.log
 /reports
 /src/translations/template.*
 /src/environments/.env.*
+/cypress/videos/
 
 # System Files
 .DS_Store
 Thumbs.db
-
-package-lock\.json

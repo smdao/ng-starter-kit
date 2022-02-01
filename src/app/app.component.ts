@@ -1,43 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 import { merge } from 'rxjs';
-import { filter, map, mergeMap } from 'rxjs/operators';
+import { filter, map, switchMap } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
-import { Logger } from '@app/core';
-import { navItems } from '@app/providers/nav.provider';
+import { Logger, UntilDestroy, untilDestroyed } from '@app/@core/@shared';
+import { I18nService } from '@app/@core/i18n';
 
 const log = new Logger('App');
 
+@UntilDestroy()
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
-  navItems = navItems;
-  sidebarMinimized = true;
-  element: HTMLElement = document.body;
-
-  private changes: MutationObserver;
-
-  /**
-   *
-   * @param router
-   * @param activatedRoute
-   * @param titleService
-   * @param i18nService
-   */
+export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private titleService: Title
+    private titleService: Title,
+    private translateService: TranslateService,
+    private i18nService: I18nService
   ) {}
 
-  /**
-   *
-   */
   ngOnInit() {
     // Setup logger
     if (environment.production) {
@@ -46,25 +34,13 @@ export class AppComponent implements OnInit {
 
     log.debug('init');
 
-    this.changes = new MutationObserver(mutations => {
-      this.sidebarMinimized = document.body.classList.contains('sidebar-minimized');
-    });
+    // Setup translations
+    this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
 
-    this.changes.observe(<Element>this.element, {
-      attributes: true
-    });
-
-    const onNavigationEnd = this.router.events.pipe(filter(event => event instanceof NavigationEnd));
-
-    this.router.events.subscribe(evt => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      window.scrollTo(0, 0);
-    });
+    const onNavigationEnd = this.router.events.pipe(filter((event) => event instanceof NavigationEnd));
 
     // Change page title on navigation or language change, based on route data
-    merge(onNavigationEnd)
+    merge(this.translateService.onLangChange, onNavigationEnd)
       .pipe(
         map(() => {
           let route = this.activatedRoute;
@@ -73,14 +49,19 @@ export class AppComponent implements OnInit {
           }
           return route;
         }),
-        filter(route => route.outlet === 'primary'),
-        mergeMap(route => route.data)
+        filter((route) => route.outlet === 'primary'),
+        switchMap((route) => route.data),
+        untilDestroyed(this)
       )
-      .subscribe(event => {
+      .subscribe((event) => {
         const title = event['title'];
         if (title) {
-          this.titleService.setTitle(title);
+          this.titleService.setTitle(this.translateService.instant(title));
         }
       });
+  }
+
+  ngOnDestroy() {
+    this.i18nService.destroy();
   }
 }

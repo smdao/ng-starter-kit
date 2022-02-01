@@ -1,0 +1,41 @@
+<mat-sidenav-container class="container" (backdropClick)="close('backdrop')">
+
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <div class="drawer-header">
+      Menu
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="toolbar">
+      <div style="width: 50%; display: flex; flex-direction: row; align-items: center;">
+        <button mat-icon-button (click)="sidenav.open()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <h1 class="app-name">
+          ng-starter-kit
+        </h1>
+
+        <a class="nav-item nav-link text-uppercase" style="color: #fff" routerLink="/home" routerLinkActive="active">
+          <i class="fas fa-home"></i>
+          <span translate>Home</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase" style="color: #fff" routerLink="/about" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i>
+          <span translate>About</span>
+        </a>
+
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: row; justify-content: flex-end; align-items: center;">
+        <app-language-selector [inNavbar]="true" menuClass="dropdown-menu dropdown-menu-right">
+        </app-language-selector>
+        <a class="nav-item nav-link text-uppercase" routerLink="/account" style="color: #fff" routerLinkActive="active">
+          <i class="fas fa-user-circle"></i>
+        </a>
+      </div>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

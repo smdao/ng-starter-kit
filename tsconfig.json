@@ -2,24 +2,43 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
+    "module": "es2020",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "noImplicitAny": false,
+    "importHelpers": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
     "suppressImplicitAnyIndexErrors": true,
-    "module": "esnext",
-    "target": "es5",
-    "typeRoots": ["node_modules/@types"],
+    "target": "es2017",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
-      "esnext",
+      "es2020",
       "dom"
     ],
-    "baseUrl": "src",
+    "baseUrl": "./",
     "paths": {
-      "@app/*": ["app/*"],
-      "@env/*": ["environments/*"]
+      "@app/*": ["src/app/*"],
+      "@shared": ["src/app/@core/@shared"],
+      "@shared/*": ["src/app/@core/@shared/*"],
+      "@env/*": ["src/environments/*"]
     }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+    "preserveWhitespaces": true
   }
 }

@@ -29,14 +29,22 @@
     "selector-max-id": 0,
     "selector-no-qualifying-type": true,
     "selector-max-universal": 0,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignore": ["custom-elements", "default-namespace"]
+      }
+    ],
     "selector-pseudo-element-no-unknown": [
       true,
       {
         "ignorePseudoElements": ["ng-deep"]
       }
     ],
-    "unit-whitelist": ["px", "%", "em", "rem", "vw", "vh", "deg", "s"],
+    "unit-allowed-list": ["px", "%", "em", "rem", "vw", "vh", "deg", "s"],
     "max-empty-lines": 2,
-    "max-line-length": 120
+    "max-line-length": 120,
+    "no-invalid-position-at-import-rule": null,
+    "scss/comment-no-empty": null
   }
 }
