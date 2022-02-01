@@ -1,6 +1,6 @@
 import { Component, ViewChild, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
-import {MatSidenav} from '@angular/material/sidenav';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-shell',
@@ -8,23 +8,22 @@ import {MatSidenav} from '@angular/material/sidenav';
   styleUrls: ['./shell.component.scss'],
 })
 export class ShellComponent implements OnInit, OnDestroy {
-
   @ViewChild('sidenav') sidenav: MatSidenav;
 
   reason = '';
 
   mobileQuery: MediaQueryList;
 
-  fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+  fillerNav = Array.from({ length: 50 }, (_, i) => `Nav Item ${i + 1}`);
 
   fillerContent = Array.from(
-    {length: 50},
+    { length: 50 },
     () =>
       `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
   );
 
   private _mobileQueryListener: () => void;
@@ -41,15 +40,14 @@ export class ShellComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * 
+   *
    */
   ngOnInit() {}
 
   /**
-   * 
+   *
    */
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
-
 }

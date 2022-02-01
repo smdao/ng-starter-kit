@@ -17,7 +17,7 @@ import { LoginComponent } from './login.component';
     NgbModule,
     I18nModule,
     AuthRoutingModule,
-    MaterialModule
+    MaterialModule,
   ],
   declarations: [LoginComponent],
 })
