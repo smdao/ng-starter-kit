@@ -1,58 +1,62 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { RouteReuseStrategy, RouterModule } from '@angular/router';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 import { environment } from '@env/environment';
-import { CoreModule } from '@app/core';
-import { SharedModule } from '@app/features/`shared';
-import { HomeModule } from './features/home/home.module';
-import { ShellModule } from './features/`shell/shell.module';
-import { AboutModule } from './features/about/about.module';
-import { LoginModule } from './features/`auth/login/login.module';
+import { RouteReusableStrategy, ApiPrefixInterceptor, ErrorHandlerInterceptor, SharedModule } from '@app/@core/@shared';
+import { AuthModule } from '@app/@core/auth';
+import { HomeModule } from './modules/home/home.module';
+import { ShellModule } from './@core/shell/shell.module';
+import { AboutModule } from './modules/about/about.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
-// External Libs
-import { PrimeNgModule } from './`external-libs/prime-ng.module';
-import { CoreUIModule } from './`external-libs/core-ui.module';
-import { NgMaterialModule } from './`external-libs/material.module';
-
-// Samples
-import { CoreUISamplesModule } from './samples/core-ui/core-ui.module';
+import { AccountModule } from './modules/account/account.module';
+import { MaterialModule } from './@libs/material.module';
 
 @NgModule({
-  // Imports
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production }),
     FormsModule,
     HttpClientModule,
-    CoreModule,
+    RouterModule,
+    TranslateModule.forRoot(),
+    NgbModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MaterialModule,
     SharedModule,
     ShellModule,
     HomeModule,
     AboutModule,
-    LoginModule,
+    AccountModule,
+    AuthModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
-    // External Libs
-    CoreUIModule,
-    PrimeNgModule,
-    NgMaterialModule,
-    // Samples
-    CoreUISamplesModule
   ],
-  // Declarations
   declarations: [AppComponent],
-  // Providers
   providers: [
     {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy
-    }
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiPrefixInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorHandlerInterceptor,
+      multi: true,
+    },
+    {
+      provide: RouteReuseStrategy,
+      useClass: RouteReusableStrategy,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
